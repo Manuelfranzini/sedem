@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/sedem/static/css/main.df42f70f.css",
+    "main.js": "/sedem/static/js/main.e8119567.js",
+    "static/js/787.ba411a9f.chunk.js": "/sedem/static/js/787.ba411a9f.chunk.js",
+    "static/media/background.jpeg": "/sedem/static/media/background.5d5ba2f9f03351ce6dda.jpeg",
+    "index.html": "/sedem/index.html",
+    "main.df42f70f.css.map": "/sedem/static/css/main.df42f70f.css.map",
+    "main.e8119567.js.map": "/sedem/static/js/main.e8119567.js.map",
+    "787.ba411a9f.chunk.js.map": "/sedem/static/js/787.ba411a9f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df42f70f.css",
+    "static/js/main.e8119567.js"
+  ]
+}
