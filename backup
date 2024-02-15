@@ -1,0 +1,185 @@
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendarAlt, faHeart, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import logo from './background.png';
+import './App.css';
+
+const PopUpContent1 = () => {
+  return (
+    <div>
+      <h2>Popup Content 1</h2>
+      <p>This is the content of the first popup.</p>
+    </div>
+  );
+};
+
+const PopUpContent2 = () => {
+  return (
+    <div>
+      <h2>Popup Content 2</h2>
+      <p>This is the content of the second popup.</p>
+    </div>
+  );
+};
+
+const PopUpContent3 = () => {
+  return (
+    <div>
+      <h2>Popup Content 3</h2>
+      <p>This is the content of the third popup.</p>
+    </div>
+  );
+};
+
+function App() {
+  const [selectedPopup, setSelectedPopup] = useState(null);
+
+  const openPopup = (popupId) => {
+    setSelectedPopup(popupId);
+  };
+
+  const closePopup = () => {
+    setSelectedPopup(null);
+  };
+
+  return (
+    <div className="app-container">
+      <img src={logo} alt="Background" className="App-Background" />
+
+      <div className="content">
+        <p>
+          SEDEM
+          <br />Orchestra
+        </p>
+
+        <ul className="popup-buttons">
+          <li>
+            <button onClick={() => openPopup(1)}>
+              <FontAwesomeIcon icon={faCalendarAlt} />
+            </button>
+          </li>
+          <li>
+            <button onClick={() => openPopup(2)}>
+              <FontAwesomeIcon icon={faHeart} />
+            </button>
+          </li>
+          <li>
+            <button onClick={() => openPopup(3)}>
+              <FontAwesomeIcon icon={faEnvelope} />
+            </button>
+          </li>
+        </ul>
+
+        {selectedPopup === 1 && (
+          <div className="popup">
+            <span className="close-btn" onClick={closePopup}>
+              &times;
+            </span>
+            <PopUpContent1 />
+          </div>
+        )}
+
+        {selectedPopup === 2 && (
+          <div className="popup">
+            <span className="close-btn" onClick={closePopup}>
+              &times;
+            </span>
+            <PopUpContent2 />
+          </div>
+        )}
+
+        {selectedPopup === 3 && (
+          <div className="popup">
+            <span className="close-btn" onClick={closePopup}>
+              &times;
+            </span>
+            <PopUpContent3 />
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
+.app-container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.App-Background {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  /* Add your styling for other content if needed */
+}
+
+.popup-buttons {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.popup-buttons li {
+  margin: 0 10px;
+}
+
+.popup-buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 40px;
+  color: #333; /* Set the desired text color */
+  color: #fff;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.popup img {
+  width: 100%;
+  height: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+}

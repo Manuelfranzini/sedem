@@ -1,0 +1,26 @@
+
+Owner               Mäxu
+customer name       Sedem orchestra
+Techstack           React
+Architecture        A single page app where only a client sided app is created with static content. Content update through app update & continual deply. 
+                    note: find link to remote agenda so that (Mäxu) can modify content slef. > like link to drive page with view only accessibility restriction.
+
+
+Todos:
+> Deploy (url & webhost)
+
+Done: 
+> Kalender = direkter link
+> Add space between "Sedem" & "orchestra"
+> Kontakt = popup
+> Youtube = direkter link
+> Intstagram = direkter link
+
+Done: 
+> Implement menu with sections (Start, Agenda, Musik, More, Fans)
+> Implement links in section Musik to (YoutubeChannel, Instagram, mäxu.ch)
+> Implement in Kontakt (info.sedemmusic@gmail.com, +tel number)
+
+
+To discuss:
+> Can we use drive doc linkt for content update? 
